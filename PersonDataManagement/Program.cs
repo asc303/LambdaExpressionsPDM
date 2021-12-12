@@ -13,6 +13,7 @@ namespace PersonDataManagement
             List<Person> listPersonsInCity = new List<Person>();
             data.AddRecords(listPersonsInCity);
             data.RetreivingTopTwoRecords_ForAgeIs_LessThanSixty(listPersonsInCity);
+            data.CheckingForTeenagerPerson(listPersonsInCity);
         }
     }
 }

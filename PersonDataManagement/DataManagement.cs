@@ -27,5 +27,13 @@ namespace PersonDataManagement
                 Console.WriteLine("Name : " + person.Name + "\t\tAge : " + person.Age);
             }
         }
+        public void CheckingForTeenagerPerson(List<Person> listPersonsInCity)
+        {
+            Console.WriteLine("The Teenagers Persons in the list are : ");
+            foreach (Person person in listPersonsInCity.FindAll(x => (x.Age >= 13 && x.Age < 19)).ToList())
+            {
+                Console.WriteLine("Name : " + person.Name + "\t\tAge : " + person.Age);
+            }
+        }
     }
 }
