@@ -35,5 +35,10 @@ namespace PersonDataManagement
                 Console.WriteLine("Name : " + person.Name + "\t\tAge : " + person.Age);
             }
         }
+        public void RetrieveAverageAge(List<Person> listPersonsInCity)
+        {
+            double averageAge = listPersonsInCity.Average(x => x.Age);
+            Console.WriteLine("The Average age of all Persons in the list are : " + averageAge);
+        }
     }
 }
