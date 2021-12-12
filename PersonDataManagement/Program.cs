@@ -12,13 +12,6 @@ namespace PersonDataManagement
             DataManagement data = new DataManagement();
             List<Person> listPersonsInCity = new List<Person>();
             data.AddRecords(listPersonsInCity);
-            data.RetreivingTopTwoRecords_ForAgeIs_LessThanSixty(listPersonsInCity);
-            data.CheckingForTeenagerPerson(listPersonsInCity);
-            data.RetrieveAverageAge(listPersonsInCity);
-            data.CheckingForSpecificName(listPersonsInCity);
-            data.SkipRecord_ForAge_LessThanSixty(listPersonsInCity);
-            data.RemoveSpecificName(listPersonsInCity);
-            data.Display(listPersonsInCity);
         }
     }
 }
