@@ -53,5 +53,13 @@ namespace PersonDataManagement
                 Console.WriteLine("No, The Name {0} is not Present in the list", search);
             }
         }
+        public void SkipRecord_ForAge_LessThanSixty(List<Person> listPersonsInCity)
+        {
+            Console.WriteLine("The List after Skipping record for age less than 60 : ");
+            foreach (Person person in listPersonsInCity.Where(x => x.Age > 60))
+            {
+                Console.WriteLine("Name : " + person.Name + "\t\tAge : " + person.Age);
+            }
+        }
     }
 }
