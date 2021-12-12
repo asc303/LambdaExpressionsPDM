@@ -61,5 +61,26 @@ namespace PersonDataManagement
                 Console.WriteLine("Name : " + person.Name + "\t\tAge : " + person.Age);
             }
         }
+        public void RemoveSpecificName(List<Person> listPersonsInCity)
+        {
+            Console.WriteLine("Enter the name you want to remove from the list : ");
+            string delete = Console.ReadLine();
+            if (listPersonsInCity.Exists(e => e.Name == delete))
+            {
+                var removeName = listPersonsInCity.RemoveAll(e => e.Name.Contains(delete));
+                Console.WriteLine("The Name {0} is Removed from the list", delete);
+            }
+            else
+            {
+                Console.WriteLine("The Entered Name {0} does not exist in the list", delete);
+            }
+        }
+        public void Display(List<Person> listPersonsInCity)
+        {
+            foreach (Person person in listPersonsInCity)
+            {
+                Console.WriteLine("SSN : " + person.SSN + "\t\t Name : " + person.Name + "\t\t Address : " + person.Address + "\t\t Age : " + person.Age);
+            }
+        }
     }
 }
